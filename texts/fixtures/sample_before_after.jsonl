@@ -1,0 +1,2 @@
+{"before":"def add(a,b):return a+b","after":"def add(a: int, b: int) -> int:\n    \"\"\"Return a + b.\"\"\"\n    return a + b\n"}
+{"before":"q = \"select * from x where id = %s\" % user_input","after":"cur.execute(\"SELECT * FROM x WHERE id = ?\", (user_input,))"}
