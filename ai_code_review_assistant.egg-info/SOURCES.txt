@@ -1,8 +1,0 @@
-pyproject.toml
-ai_code_review_assistant.egg-info/PKG-INFO
-ai_code_review_assistant.egg-info/SOURCES.txt
-ai_code_review_assistant.egg-info/dependency_links.txt
-ai_code_review_assistant.egg-info/requires.txt
-ai_code_review_assistant.egg-info/top_level.txt
-src/cli.py
-src/mcp_server.py
