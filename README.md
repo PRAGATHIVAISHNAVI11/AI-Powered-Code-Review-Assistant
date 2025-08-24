@@ -1,72 +1,58 @@
-🚀 AI-Powered Code Review Assistant
+Here’s a professional and complete README.md for your AI-Powered Code Review Assistant project:
 
-An intelligent multi-agent code reviewer built with LangGraph and LangChain, enhanced with Retrieval-Augmented Generation (RAG) for context-aware best practices, and Model Context Protocol (MCP) for real-time IDE feedback.
+# AI-Powered Code Review Assistant
 
-This project analyzes code for style, security, performance, and documentation issues, then merges the results into concise, prioritized suggestions. Optimized prompts and retrieval pipelines achieved an ~85% suggestion acceptance rate during testing.
+An AI-driven tool to help developers get real-time code review feedback across multiple programming languages using advanced multi-agent architecture.
 
-✨ Features
+## Features
 
-🧩 Multi-agent architecture (lint, security, performance, docs reviewers)
+- **Multi-agent LangGraph Architecture**: Uses a network of AI agents for specialized code review tasks.
+- **Context-Aware Suggestions**: Implements RAG (Retrieval-Augmented Generation) for best practice retrieval.
+- **Real-Time IDE Feedback**: MCP integration provides instant, actionable suggestions while coding.
+- **Secure & Performance-Focused Reviews**: Highlights security vulnerabilities, performance bottlenecks, and style issues.
+- **Multi-Language Support**: Works with Python, Java, C, JavaScript, and more.
+- **Interactive Streamlit App**: Easy-to-use web interface to run code reviews.
 
-📚 RAG integration → retrieves coding best practices for context-aware reviews
+## Tech Stack
 
-⚡ Real-time IDE feedback via MCP server
+- **Backend**: Python, LangGraph, LangChain, RAG, FAISS, Embeddings
+- **Frontend**: Streamlit
+- **Other Tools**: Prompt Optimization, Multi-Agent Coordination (MCP)
 
-📊 Aggregated suggestions ranked by severity and likelihood of acceptance
+## Installation
 
-🛠️ CLI tool for batch reviewing repos and exporting JSON reports
+1. Clone the repository:
+1. Clone the repository:
 
-🛠️ Tech Stack
-
-Languages: Python
-
-AI/LLM Tools: LangGraph, LangChain, Retrieval-Augmented Generation (RAG), MCP
-
-Libraries: FAISS, Sentence-Transformers, Rich, Click
-
-Platforms: OpenAI API, Hugging Face (optional), IBM Cloud (optional)
-
-🚀 Getting Started
-
-Clone repo & install dependencies
-
-git clone https://github.com/yourusername/ai-code-review-assistant.git
-cd ai-code-review-assistant
-python -m venv .venv && source .venv/bin/activate
-pip install -e .
+''bash''
+git clone https://github.com/PRAGATHIVAISHNAVI11/AI-Powered-Code-Review-Assistant.git
+cd AI-Powered-Code-Review-Assistant
 
 
-Setup environment
+Install dependencies:
 
-cp .env.example .env   # fill in your API keys
-
-
-Run CLI review
-
-python -m src.cli review --path data/examples --topk 1
+pip install -r requirements.txt
 
 
-Run MCP server (IDE feedback)
+Set your OpenAI API key in a .env file:
 
-python -m src.mcp_server
+OPENAI_API_KEY=your_api_key_here
 
-📊 Example Output
-{
-  "suggestions": [
-    {
-      "title": "Use parameterized SQL queries",
-      "severity": "critical",
-      "rationale": "Prevents SQL injection by avoiding string concatenation",
-      "patch": "cur.execute('SELECT * FROM users WHERE name = ?', (user_input,))",
-      "references": ["secure-coding.md"],
-      "agent": "security"
-    }
-  ],
-  "acceptance_likelihood": 0.85
-}
+Usage
 
-📈 Results
+Run the Streamlit app:
 
-Achieved ~85% suggestion acceptance rate in testing
+streamlit run app.py
 
-Improved code quality, security, and performance with minimal developer overhead
+screenshots:
+
+<img width="1920" height="1014" alt="Screenshot (873)" src="https://github.com/user-attachments/assets/02210402-6667-4ced-8698-7f2d7ad945ba" />
+
+<img width="1920" height="1000" alt="Screenshot (874)" src="https://github.com/user-attachments/assets/552aa654-51f8-4262-bd05-dded108ce1ee" />
+
+<img width="1920" height="1038" alt="Screenshot (875)" src="https://github.com/user-attachments/assets/646353ce-df68-4c38-a8b9-16e15f44d71e" />
+
+Contribution
+
+Feel free to open issues or submit pull requests to add new features, improve existing code, or extend language support.
+
